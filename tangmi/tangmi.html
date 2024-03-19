@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+
+  <body>
+    <!-- <embed id="pdf" /> -->
+    <embed id="pdf" />
+  </body>
+
+  <script>
+    function load() {
+      const queryString = window.location.search;
+      const urlParams = new URLSearchParams(queryString);
+      const product = urlParams.get("pass");
+      if (product == "1") {
+        console.log("triggered");
+        document.getElementById("pdf").setAttribute("src", "tangmi1.pdf");
+      }
+    }
+    window.onload = load;
+  </script>
+</html>
